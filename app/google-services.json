@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "459490475148",
+    "firebase_url": "https://actfinder-65b02.firebaseio.com",
+    "project_id": " actfinder-65b02",
+    "storage_bucket": " actfinder-65b02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459490475148:android:94bca05ea99799e7",
+        "android_client_info": {
+          "package_name": "com.hugo.actfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459490475148-if53ifm3jqm6stjkrh6qe7mvu7o8gua5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hugo.actfinder",
+            "certificate_hash": "ED602F39E533336724B2E6820B80B26321809CAD"
+          }
+        },
+        {
+          "client_id": "459490475148-u66edlgmv7gaeukek5ehbfrabcl36d4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkvL1u2T8SYQUmb9UNVtGU6i_8vcCjEtY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459490475148-u66edlgmv7gaeukek5ehbfrabcl36d4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
