@@ -15,6 +15,8 @@
  */
 package com.hugo.actfinder;
 
+//class to handle variable information
+//sets and gets the data into the variables inside the message class
 public class FriendlyMessage {
 
     private String id;

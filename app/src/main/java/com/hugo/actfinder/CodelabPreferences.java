@@ -15,6 +15,7 @@
  */
 package com.hugo.actfinder;
 
+//class to handle remote changes from the firebase database
 public class CodelabPreferences {
 
     public static final String INSTANCE_ID_TOKEN_RETRIEVED = "iid_token_retrieved";

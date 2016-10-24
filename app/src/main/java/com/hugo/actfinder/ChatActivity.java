@@ -50,7 +50,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
@@ -61,6 +60,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+//chat activity for two individuals to chat about the activity they are looking to take part in
 public class ChatActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
 
@@ -77,6 +77,7 @@ public class ChatActivity extends AppCompatActivity implements
         }
     }
 
+    // variables to create the chat between two people
     private static final String TAG = "ChatActivity";
     public static final String MESSAGES_CHILD = "messages";
     private static final int REQUEST_INVITE = 1;
@@ -87,6 +88,7 @@ public class ChatActivity extends AppCompatActivity implements
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
 
+    //variables for the layout items of the application
     private Button mSendButton;
     private RecyclerView mMessageRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
@@ -107,7 +109,7 @@ public class ChatActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_chat);
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mUsername = ANONYMOUS;
+        //mUsername = ANONYMOUS;
 
         // Initialize Firebase Auth
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -275,10 +277,10 @@ public class ChatActivity extends AppCompatActivity implements
             case R.id.invite_menu:
                 sendInvitation();
                 return true;
-            case R.id.crash_menu:
-                FirebaseCrash.logcat(Log.ERROR, TAG, "crash caused");
-                causeCrash();
-                return true;
+//            case R.id.crash_menu:
+//                FirebaseCrash.logcat(Log.ERROR, TAG, "crash caused");
+//                causeCrash();
+//                return true;
             case R.id.sign_out_menu:
                 mFirebaseAuth.signOut();
                 Auth.GoogleSignInApi.signOut(mGoogleApiClient);
@@ -287,9 +289,9 @@ public class ChatActivity extends AppCompatActivity implements
                 mPhotoUrl = null;
                 startActivity(new Intent(this, SignInActivity.class));
                 return true;
-            case R.id.fresh_config_menu:
-                fetchConfig();
-                return true;
+//            case R.id.fresh_config_menu:
+//                fetchConfig();
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
